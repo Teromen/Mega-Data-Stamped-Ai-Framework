@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics + Lighting Data Tagging System</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background-color: #eaeaea;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-size: 90%;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1em;
+      color: #555;
+      margin-left: 0;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Stamped Data Tagging System for Physics and Lighting</h1>
+  <p><strong>By Teromen</strong></p>
+
+  <h2>Overview</h2>
+  <p>
+    I’m an amateur level designer fascinated by how engines handle large-scale environments, and I’ve been brainstorming a theoretical system that I’d love to get feedback on — especially from anyone with programming or engine experience.
+  </p>
+
+  <h2>The Core Idea</h2>
+  <p>
+    Rather than relying on dense geometry or heavy shaders everywhere, what if an engine used <strong>stamped data</strong> — similar to <em>MegaTexture</em> decals — not just for visuals, but for <strong>physics</strong> and <strong>lighting</strong> information as well?
+  </p>
+  <p>
+    These stamps could include <code>16-bit normal maps</code> (or similar precision) that represent physical surface properties like:
+  </p>
+  <ul>
+    <li>Bump height</li>
+    <li>Surface friction</li>
+    <li>Impact reaction zones</li>
+  </ul>
+
+  <h2>Vector Path Tracing Concept</h2>
+  <p>
+    Alongside this, I’m imagining a <strong>vector path tracing system</strong> — not necessarily full real-time ray tracing — but something that leverages vector data to simulate:
+  </p>
+  <ul>
+    <li>Light bounce and diffusion</li>
+    <li>Material influence</li>
+    <li>Ambient energy transfer</li>
+  </ul>
+  <p>
+    It could be optimized for large, detailed environments without taxing the GPU like traditional RT.
+  </p>
+
+  <h2>Why This?</h2>
+  <p>
+    The goal is a <strong>lightweight system</strong> for delivering realistic lighting and material response, especially in open-world or dense indoor scenes. Instead of real-time geometry or lighting updates, the system would rely on:
+  </p>
+  <ul>
+    <li>Pre-tagged physical surface maps</li>
+    <li>Data stamps placed by designers or automated tooling</li>
+    <li>Efficient logic lookups for physics and lighting behavior</li>
+  </ul>
+
+  <h2>Questions for the Community</h2>
+  <ul>
+    <li>Does anything like this already exist in engines or tools?</li>
+    <li>Could a simplified version be implemented using scripting?</li>
+    <li>Are “tagged” surface behaviors used anywhere else that I might not know about?</li>
+  </ul>
+  <p>
+    I’m tossing this out as a thought experiment and would love to hear what others think!
+  </p>
+
+  <footer>
+    Thanks for reading,<br/>
+    — Teromen
+  </footer>
+
+</body>
+</html>
